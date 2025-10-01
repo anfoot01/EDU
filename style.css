@@ -181,14 +181,20 @@ a {
 }
 
 .lang-icon {
-    width: 44px;
-    height: 44px;
+    width: 54px;
+    height: 54px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.04);
     display: grid;
     place-items: center;
-    font-weight: 700;
-    flex: 0 0 44px;
+    font-weight: 00;
+    flex: 0 0 54px;
+}
+
+.lang-icon svg {
+    width: 44px;
+    height: 44px;
+
 }
 
 /* Right column - CTA card */
@@ -356,22 +362,23 @@ a {
 @media (max-width:590px) {
     body {
         padding: 0px 0px;
+        background: #071028;
     }
 
     .main-cont {
         align-items: flex-start;
-        
+        height: 100%;
+
     }
 
     .container {
-
+        box-shadow: 0px 0px 0px;
         border-radius: 0px;
         padding: 14px;
-
+        background: #071028;
     }
 
     .hero {
-    
         gap: 0px;
     }
 
@@ -404,7 +411,6 @@ a {
     }
 
     .cta {
-
         padding: 12px;
         border-radius: 12px;
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
@@ -412,5 +418,21 @@ a {
         flex-direction: column;
         gap: 8px;
         align-items: stretch;
+    }
+
+    .lang-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.04);
+        display: grid;
+        place-items: center;
+        font-weight: 00;
+        flex: 0 0 34px;
+    }
+
+    .lang-icon svg {
+        width: 26px;
+        height: 26px;
     }
 }
