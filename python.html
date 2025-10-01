@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnCode — Learn Programming Languages</title>
+    <link rel="stylesheet" href="course-page.css">
+    <link rel="stylesheet" href="./header.css">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <header>
+            <div class="logo" aria-hidden="true">
+                <a href="./index.html">
+                    <img class="logo-img" src="./img/android-chrome-512x512.png" alt="logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <div class="burger" id="burger">&#9776;</div>
+                <ul class="nav-list">
+                    <li><span class="close-menu" id="close-menu">&times;</span></li>
+                    <li class="nav-link" data-section="Python"><a href="./python.html">Python</a></li>
+                    <li class="nav-link" data-section="Javascript"><a href="./javascript.html">Javascript</a></li>
+                    <li class="nav-link" data-section="SQL"><a href="./sql.html">SQL</a></li>
+                    <li class="nav-link" data-section="Go"><a href="./go.html">Go</a></li>
+                    <li class="nav-link" data-section="Rust"><a href="./rust.html">Rust</a></li>
+                    <li class="nav-link" data-section="C++"><a href="./cpp.html">C++</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>
+            Course <i>"Python"</i></h1>
+
+        <!-- Module 1 -->
+        <div class="module">
+            <h2>Module 1. Introduction to Python</h2>
+            <p><b>Theory:</b> Python is an interpreted, high-level, dynamically typed programming language. It is widely
+                used in web development, data science, machine learning, automation, and scripting. Its syntax is simple
+                and human-readable.</p>
+            <pre><code>print("Hello, Python!")</code></pre>
+            <p><b>Practice:</b>Print "Hello, Python!" to the console.</p>
+            <p><b>Quiz:</b>Is Python compiled or interpreted?</p>
+            <button onclick="showAnswer(this, 'Interpreted')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="module">
+            <h2>Module 2. Variables and Data Types</h2>
+            <p><b>Theory:</b>
+            </p>
+            <ul>
+                <li>Python is dynamically typed.</li>
+                <li>Data types: int, float, str, bool, list, tuple, set, dict.</li>
+                <li>Use <code>type() </code> to check a variable's type.</li>
+            </ul>
+            <pre><code>name = "Alice"
+age = 21
+is_student = True
+
+print(name, age, is_student)
+print(type(name), type(age), type(is_student))</code></pre>
+            <p><b>Practice:</b> Create variables: your name, age, and student status. Print them.
+            </p>
+            <p><b>Quiz:</b> What is the difference between <code> list </code> and <code> tuple </code>? </p>
+            <button onclick="showAnswer(this, 'List is mutable, tuple is immutable.')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="module">
+            <h2>Module 3. Operators</h2>
+            <p><b>Theory:</b> </p>
+            <ul>
+                <li>Arithmetic: <code> + - * / // % **</code></li>
+                <li>Comparison: <code> == != > <>= <=</code> </li>
+                <li>Logical: <code> and, or, not </code></li>
+                <li>Membership: <code> in </code></li>
+            </ul>
+            <pre><code>let a = 5, b = 3;
+console.log(a + b); // 8
+console.log(a > b); // true</code></pre>
+            <p><b>Practice:</b> Check if a number is between 10 and 20.</p>
+            <p><b>Quiz:</b> What does <code> // </code> do?</code>?</p>
+            <button onclick="showAnswer(this, 'Integer division')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="module">
+            <h2>Module 4. Conditional Statements</h2>
+            <p><b>Theory:</b> Python uses <code>if, elif</code> and <code>else</code> for decision making.</p>
+            <pre><code>n = -5
+if n > 0:
+    print("Positive")
+elif n < 0:
+    print("Negative")
+else:
+    print("Zero")</code></pre>
+            <p><b>Practice:</b> Check if a number is positive, negative, or zero.</p>
+            <p><b>Quiz:</b> Which keyword is used for multiple conditions?</p>
+            <button onclick="showAnswer(this, 'elif')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="module">
+            <h2>Module 5. Loops</h2>
+            <p><b>Theory:</b> Loops let you repeat actions. The main types are:</p>
+            <ul>
+                <li> <code>for</code> iterates over sequences</li>
+                <li><code>while</code> repeats while condition is true</li>
+                <li><code>break</code> stops loop, <code>continue</code> skips iteration</li>
+            </ul>
+            <pre><code>for (let i = 1; i &lt;= 5; i++) {
+  console.log("Step", i);
+}</code></pre>
+            <p><b>Practice:</b> Print numbers from 1 to 20.</p>
+            <p><b>Quiz:</b>What does <code> range(5) </code> give?</p>
+            <button onclick="showAnswer(this, '0,1,2,3,4')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="module">
+            <h2>Module 6. Functions</h2>
+            <p><b>Theory:</b> Functions are created with <code>def.</code> They may return values.</p>
+            <pre><code>def square(n):
+    return n * n
+
+print(square(5))  # 25</code></pre>
+            <p><b>Practice:</b> Write a function to calculate square of a number.</p>
+            <p><b>Quiz:</b> Which keyword is used to return?</p>
+            <button onclick="showAnswer(this, 'return')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 7 -->
+        <div class="module">
+            <h2>Module 7. Collections</h2>
+            <p><b>Theory:</b> </p>
+            <ul>
+                <li> <code>list, tuple, set, dict</code></li>
+                <li>Lists are mutable, tuples immutable, sets unique, dicts key-value.</li>
+            </ul>
+            <pre><code>grades = {"Alice": 90, "Bob": 85}
+print(grades["Alice"])</code></pre>
+            <p><b>Practice:</b> Create a dictionary of students and grades.</p>
+            <p><b>Quiz:</b>What makes sets unique?</p>
+            <button onclick="showAnswer(this, 'They don’t allow duplicates.')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 8 -->
+        <div class="module">
+            <h2>Module 8. Strings</h2>
+            <p><b>Theory:</b> Strings have many methods: <code> .upper(), .lower(), .replace(), .split().</code>
+                You can format with f-strings.</p>
+            <pre><code>text = "hello world"
+print(text.title())      # Hello World
+print(len(text))         # 11</code></pre>
+            <p><b>Practice:</b>Capitalize "hello world".</p>
+            <p><b>Quiz:</b> Which function gives string length?</p>
+            <button onclick="showAnswer(this, 'len()')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 9 -->
+        <div class="module">
+            <h2>Module 9. Modules and Libraries</h2>
+            <p><b>Theory:</b> Python code can be split into modules. Use <code>import</code> to load them.
+                Install external packages with <code>pip</code>.</p>
+            <pre><code>import random
+print(random.randint(1, 10))</code></pre>
+            <p><b>Practice:</b>Generate a random number between 1 and 10.</p>
+            <p><b>Quiz:</b> What’s the difference between <code> import math </code> and
+                <code> from math import sqrt? </code>
+            </p>
+            <button onclick="showAnswer(this, 'Whole module vs specific function.')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 10 -->
+        <div class="module">
+            <h2>Module 10. Error Handling</h2>
+            <p><b>Theory:</b> </p>
+            <ul>
+                <li> Handle errors with <code> try/except </code>.</li>
+                <li> <code> finally </code> always executes.</li>
+                <li> <code> raise </code> triggers errors manually.</li>
+            </ul>
+            <pre><code>try:
+    x = 5 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")</code></pre>
+            <p><b>Practice:</b> Divide numbers safely.</p>
+            <p><b>Quiz:</b>What happens if you divide by zero?</p>
+            <button onclick="showAnswer(this, 'ZeroDivisionError')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 11 -->
+        <div class="module">
+            <h2>Module 11. OOP Basics</h2>
+            <p><b>Theory:</b> Python is object-oriented: classes define objects with attributes and methods.</p>
+
+
+            <pre><code>class Car:
+    def __init__(self, brand, speed):
+        self.brand = brand
+        self.speed = speed
+    
+    def drive(self):
+        print(f"{self.brand} is driving at {self.speed} km/h")
+
+car = Car("BMW", 120)
+car.drive()</code></pre>
+            <p><b>Practice:</b>Create a <code> Car </code> class.</p>
+            <p><b>Quiz:</b>Which keyword defines a class?</p>
+            <button onclick="showAnswer(this, 'class')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 12 -->
+        <div class="module">
+            <h2>Module 12. File Handling</h2>
+            <p><b>Theory:</b> Use <code> open() </code> with modes: <code> r, w, a </code>. Use <code> with </code> to
+                auto-close.</p>
+
+            <pre><code>with open("test.txt", "w") as f:
+    f.write("Python is awesome\n")</code></pre>
+            <p><b>Practice:</b>Write a text file with "Python is awesome".</p>
+            <p><b>Quiz:</b>What does <code> .readlines() </code> return?</p>
+            <button onclick="showAnswer(this, 'A list of lines.')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 13 -->
+        <div class="module">
+            <h2>Module 13. Popular Libraries</h2>
+            <p><b>Theory:</b> </p>
+            <ul>
+                <li> <code>os</code> – system operations</li>
+                <li> <code>datetime</code> – dates</li>
+                <li> <code>requests</code> – HTTP</li>
+                <li> <code>json</code> – JSON handling</li>
+            </ul>
+            <pre><code>from datetime import datetime
+print(datetime.now())</code></pre>
+            <p><b>Practice:</b> Print today’s date.</p>
+            <p><b>Quiz:</b>Which package manager installs libraries?</p>
+            <button onclick="showAnswer(this, 'pip')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 14 -->
+        <div class="module">
+            <h2>Module 14. Mini Projects</h2>
+            <ul>
+                <li><b>Calculator</b></li>
+                <li><b>To-Do List</b> </li>
+                <li><b>Password Generator</b></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function showAnswer(btn, text) {
+            const div = btn.nextElementSibling;
+            div.textContent = "Answer: " + text;
+        }
+
+        const burger = document.getElementById('burger');
+        const navList = document.querySelector('.nav-list');
+
+        burger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+        const closeBtn = document.getElementById('close-menu');
+
+        closeBtn.addEventListener('click', () => {
+            navList.classList.remove('show');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LearnCode — Learn Programming Languages</title>
+  <meta name="description"
+    content="LearnCode — Easy lessons in Python, JavaScript, SQL and other languages. Start now!" />
+  <link rel="stylesheet" href="./style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+  <link rel="manifest" href="./img/site.webmanifest">
+</head>
+
+<body>
+  <div class="main-cont">
+    <div class="container" role="main" aria-labelledby="main-title">
+      <header class="header" aria-hidden="false">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">
+            <img class="logo-img" src="./img/android-chrome-512x512.png" alt="logo">
+          </div>
+          <div>
+            <h1 id="main-title">LearnCode</h1>
+            <p>Let's learn programming languages - quickly and easily</p>
+          </div>
+        </div>
+        <div class="kv">Free · Practical exercises · Affiliate courses</div>
+      </header>
+
+      <section class="hero" aria-label="Choose a programming language to learn">
+        <div class="lead">
+          <h2>What language do you want to learn?</h2>
+          <p>
+            Select a language below, click <strong>Start</strong>
+            and start learning with practical examples and a selection of courses.</p>
+
+          <div class="lang-grid" id="langGrid" role="listbox" aria-label="Programming languages">
+            <div class="lang-card" data-lang="Python" role="option" tabindex="0">
+              <div class="lang-icon" aria-hidden="true">
+                <!-- Python snake SVG simplified -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 2h6v2H9v2h4c1.7 0 3 1.3 3 3v2H7V2z" fill="#FFD43B" />
+                  <path d="M17 22h-6v-2h4v-2H9c-1.7 0-3-1.3-3-3V14h11v8z" fill="#306998" />
+                </svg>
+              </div>
+              <div>
+                <div style="font-weight:700">Python</div>
+                <div class="small">For analytics, AI, automation</div>
+              </div>
+            </div>
+
+            <div class="lang-card" data-lang="JavaScript" role="option" tabindex="0">
+              <div class="lang-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="3" width="18" height="18" rx="2" fill="#F7DF1E" />
+                  <path
+                    d="M8.7 7.9l1.8-.6c.2.6.4 1.1.7 1.4.2.2.5.4 1 .5.5.1 1 .2 1.6.2 0 .9-.6 1.6-1.8 1.6-.8 0-1.3-.2-1.9-.6l-.5 1.6c.7.4 1.5.7 2.8.7 2 0 3.1-1 3.1-2.7 0-1.8-1-2.6-2.6-3-.8-.2-1.6-.3-2.6-.3-.6 0-1.3.1-1.9.3z"
+                    fill="#000" />
+                </svg>
+              </div>
+              <div>
+                <div style="font-weight:700">JavaScript</div>
+                <div class="small">Web, frontend, interactive applications</div>
+              </div>
+            </div>
+
+            <div class="lang-card" data-lang="SQL" role="option" tabindex="0">
+              <div class="lang-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" fill="#4DB6AC" />
+                  <path d="M2 17l10 5 10-5" fill="#00796B" />
+                </svg>
+              </div>
+              <div>
+                <div style="font-weight:700">SQL</div>
+                <div class="small">Working with databases, analytics</div>
+              </div>
+            </div>
+
+            <div class="lang-card" data-lang="Go" role="option" tabindex="0">
+              <div class="lang-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" fill="#00ADD8" />
+                  <path d="M8 16s1-1 3-1 3 1 3 1" stroke="#fff" stroke-width="1.2" fill="none" />
+                </svg>
+              </div>
+              <div>
+                <div style="font-weight:700">Go</div>
+                <div class="small">
+                  Server applications, high-performance services</div>
+              </div>
+            </div>
+
+            <div class="lang-card" data-lang="Rust" role="option" tabindex="0">
+              <div class="lang-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" fill="#DEA584" />
+                  <path d="M12 8v8" stroke="#3C3C3C" stroke-width="1.2" />
+                </svg>
+              </div>
+              <div>
+                <div style="font-weight:700">Rust</div>
+                <div class="small">System programming, memory security</div>
+              </div>
+            </div>
+
+            <div class="lang-card" data-lang="C++" role="option" tabindex="0">
+              <div class="lang-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="3" width="18" height="18" rx="3" fill="#5C8CAE" />
+                  <text x="7" y="17" fill="#fff" font-size="10" font-family="Arial">C++</text>
+                </svg>
+              </div>
+              <div>
+                <div style="font-weight:700">C++</div>
+                <div class="small">
+                  Productivity apps, games, engines</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="cta" aria-label="Start of training">
+          <h3 id="cta-title">
+            Ready to start?</h3>
+          <div class="small">Select the language on the left, click <strong>Start</strong> and get a study plan and a
+            selection of courses.</div>
+          <div class="start-row" style="margin-top:12px;">
+            <div>
+              <div class="kv">
+
+                Selected language:</div>
+              <div id="output" id="selLang" style="font-weight:700">—</div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;" disabled>
+              <a id="startLink" href="#">
+                <button id="startBtn" class="btn-start " disabled>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 3v18l15-9L5 3z" fill="#071027" />
+                  </svg>
+                  Start
+                </button>
+              </a>
+              <div style="font-size:12px;color:var(--muted)">
+                Completion time: from 2 weeks</div>
+            </div>
+
+          </div>
+
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+            <strong>
+              What you will get:</strong>
+            <ul style="margin:8px 0 0 18px;padding:0;color:var(--muted)">
+              <li>
+                Step-by-step training plan
+              </li>
+              <li>
+                A selection of free courses
+              </li>
+              <li>
+                Practical problems and code examples
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="footer" aria-hidden="false">
+        <div>© LearnCode — 2025</div>
+        <div>Start with <strong>Python</strong> or <strong>JavaScript</strong></div>
+      </footer>
+    </div>
+  </div>
+
+
+  <!-- Minimal JS for interactions and a small confetti effect -->
+  <script>
+    (function () {
+      const cards = document.querySelectorAll('.lang-card');
+      const sel = document.getElementById('selLang');
+      const startBtn = document.getElementById('startBtn');
+      let selected = null;
+
+      function setSelected(card) {
+        cards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        selected = card.dataset.lang;
+        sel.textContent = card.querySelector('div > div').textContent || selected;
+        startBtn.classList.remove('disabled');
+        startBtn.setAttribute('aria-disabled', 'false');
+        startBtn.classList.add('pulse');
+      }
+
+      cards.forEach(card => {
+        card.addEventListener('click', () => setSelected(card));
+        card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelected(card); } });
+      });
+
+      startBtn.addEventListener('click', () => {
+        if (!selected) return;
+        showQuickPlan(selected);
+      });
+
+
+
+    })();
+    function initLanguageSelector() {
+      const divs = document.querySelectorAll("div[data-lang]");
+      const output = document.getElementById("output");
+      const startBtn = document.getElementById("startBtn");
+      const startLink = document.getElementById("startLink");
+      let selectedLang = "";
+
+      const langToPage = {
+        "Python": "python.html",
+        "JavaScript": "javascript.html",
+        "Go": "go.html",
+        "Rust": "rust.html",
+        "SQL": "sql.html",
+        "C++": "cpp.html"
+      };
+
+      divs.forEach(div => {
+        div.addEventListener("click", () => {
+          selectedLang = div.dataset.lang;
+          output.textContent = selectedLang;
+          startBtn.disabled = false;
+          startBtn.classList.add("pulse");
+
+
+          if (langToPage[selectedLang]) {
+            startLink.href = langToPage[selectedLang];
+          }
+        });
+      });
+    }
+
+    initLanguageSelector();
+  </script>
+</body>
+
+</html>

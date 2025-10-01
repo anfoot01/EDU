@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnCode — Learn Programming Languages</title>
+    <link rel="stylesheet" href="course-page.css">
+    <link rel="stylesheet" href="./header.css">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <header>
+            <div class="logo" aria-hidden="true">
+                <a href="./index.html">
+                    <img class="logo-img" src="./img/android-chrome-512x512.png" alt="logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <div class="burger" id="burger">&#9776;</div>
+                <ul class="nav-list">
+                    <li><span class="close-menu" id="close-menu">&times;</span></li>
+                    <li class="nav-link" data-section="Python"><a href="./python.html">Python</a></li>
+                    <li class="nav-link" data-section="Javascript"><a href="./javascript.html">Javascript</a></li>
+                    <li class="nav-link" data-section="SQL"><a href="./sql.html">SQL</a></li>
+                    <li class="nav-link" data-section="Go"><a href="./go.html">Go</a></li>
+                    <li class="nav-link" data-section="Rust"><a href="./rust.html">Rust</a></li>
+                    <li class="nav-link" data-section="C++"><a href="./cpp.html">C++</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>
+            Course <i>"JavaScript from Scratch"</i></h1>
+
+        <!-- Module 1 -->
+        <div class="module">
+            <h2>Module 1. Introduction</h2>
+            <p><b>Theory:</b> JavaScript is a programming language that makes websites interactive. It works inside
+                browsers
+                and is one of the core technologies of the web, together with HTML and CSS.</p>
+            <p>With JavaScript, you can:
+            <ul>
+                <li>Validate user input in forms.</li>
+                <li>Create interactive animations.</li>
+                <li>Build web apps and even mobile apps.</li>
+            </ul>
+            </p>
+            <pre><code>&lt;script&gt;
+  alert("Hello, world!");
+&lt;/script&gt;</code></pre>
+            <p><b>Practice:</b> Make your own alert with the message "I am learning JS!".</p>
+            <p><b>Quiz:</b> What is JavaScript mainly used for?</p>
+            <button onclick="showAnswer(this, 'For website interactivity')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="module">
+            <h2>Module 2. Variables and Data Types</h2>
+            <p><b>Theory:</b> Variables store information in memory. There are three main keywords for declaring them:
+                <code>let</code>, <code>const</code>, and <code>var</code> (old, rarely used). Data types include:
+            </p>
+            <ul>
+                <li><code>string</code> – text data ("Hello")</li>
+                <li><code>number</code> – numeric values (10, 3.14)</li>
+                <li><code>boolean</code> – true or false</li>
+                <li><code>null</code> – empty value</li>
+                <li><code>undefined</code> – variable declared but not assigned</li>
+                <li><code>object</code> – collection of key-value pairs</li>
+                <li><code>array</code> – ordered list of values</li>
+            </ul>
+            <pre><code>let name = "Anna";
+const age = 20;
+let isStudent = true;</code></pre>
+            <p><b>Practice:</b> Create variables with your name, age, and student status. Log them with
+                <code>console.log()</code>.
+            </p>
+            <p><b>Quiz:</b> Which keyword is used for a constant variable?</p>
+            <button onclick="showAnswer(this, 'const')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="module">
+            <h2>Module 3. Operators</h2>
+            <p><b>Theory:</b> Operators allow you to perform actions with values. The most common are:</p>
+            <ul>
+                <li>Arithmetic: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></li>
+                <li>Comparison: <code>==</code>, <code>===</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>
+                </li>
+                <li>Logical: <code>&amp;&amp;</code>, <code>||</code>, <code>!</code></li>
+            </ul>
+            <pre><code>let a = 5, b = 3;
+console.log(a + b); // 8
+console.log(a > b); // true</code></pre>
+            <p><b>Practice:</b> Calculate the average of three numbers.</p>
+            <p><b>Quiz:</b> What is the result of <code>5 == "5"</code>?</p>
+            <button onclick="showAnswer(this, 'true')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="module">
+            <h2>Module 4. Conditions</h2>
+            <p><b>Theory:</b> Conditions let your program make decisions. You can use <code>if</code>,
+                <code>else if</code>,
+                <code>else</code>, and <code>switch</code>.
+            </p>
+            <pre><code>let age = 18;
+if (age >= 18) {
+  console.log("Access granted");
+} else {
+  console.log("Access denied");
+}</code></pre>
+            <p><b>Practice:</b> Check if a number is even.</p>
+            <p><b>Quiz:</b> What does the <code>%</code> operator do?</p>
+            <button onclick="showAnswer(this, 'Remainder of division')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="module">
+            <h2>Module 5. Loops</h2>
+            <p><b>Theory:</b> Loops let you repeat actions. The main types are:</p>
+            <ul>
+                <li><code>for</code> – repeats for a set number of times.</li>
+                <li><code>while</code> – repeats while a condition is true.</li>
+                <li><code>do...while</code> – executes at least once, then repeats while condition is true.</li>
+            </ul>
+            <pre><code>for (let i = 1; i &lt;= 5; i++) {
+  console.log("Step", i);
+}</code></pre>
+            <p><b>Practice:</b> Print numbers from 1 to 20.</p>
+            <p><b>Quiz:</b> Which loop executes at least once even if the condition is false?</p>
+            <button onclick="showAnswer(this, 'do...while')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="module">
+            <h2>Module 6. Functions</h2>
+            <p><b>Theory:</b> Functions let you group reusable code. They can take parameters and return values.</p>
+            <pre><code>function greet(name) {
+  return "Hello, " + name + "!";
+}
+console.log(greet("Olivia"));</code></pre>
+            <p><b>Practice:</b> Write a function that calculates the square of a number.</p>
+            <p><b>Quiz:</b> Which keyword is used to return a value from a function?</p>
+            <button onclick="showAnswer(this, 'return')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 7 -->
+        <div class="module">
+            <h2>Module 7. Arrays</h2>
+            <p><b>Theory:</b> Arrays store multiple values in a single variable. You can use methods like
+                <code>push</code>,
+                <code>pop</code>, <code>length</code>, and <code>forEach</code>.
+            </p>
+            <pre><code>let fruits = ["apple", "banana"];
+fruits.push("orange");
+console.log(fruits.length); // 3</code></pre>
+            <p><b>Practice:</b> Create an array of your favorite movies and print the first and last one.</p>
+            <p><b>Quiz:</b> How do you get the length of an array?</p>
+            <button onclick="showAnswer(this, 'array.length')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 8 -->
+        <div class="module">
+            <h2>Module 8. Events</h2>
+            <p><b>Theory:</b> Events let you react to user actions, like clicking, typing, or submitting forms.</p>
+            <pre><code>&lt;button onclick="sayHello()"&gt;Click me&lt;/button&gt;
+&lt;script&gt;
+function sayHello() {
+  alert("Hello!");
+}
+&lt;/script&gt;</code></pre>
+            <p><b>Practice:</b> Make a button that changes the text on the page when clicked.</p>
+            <p><b>Quiz:</b> Which event is triggered by clicking a button?</p>
+            <button onclick="showAnswer(this, 'onclick')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 9 -->
+        <div class="module">
+            <h2>Module 9. Mini Projects</h2>
+            <ul>
+                <li><b>Calculator:</b> Perform addition, subtraction, multiplication, and division.</li>
+                <li><b>Guess the Number:</b> Computer generates a random number, user guesses it.</li>
+                <li><b>To-Do List:</b> Add and remove tasks dynamically.</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function showAnswer(btn, text) {
+            const div = btn.nextElementSibling;
+            div.textContent = "Answer: " + text;
+        }
+
+        const burger = document.getElementById('burger');
+        const navList = document.querySelector('.nav-list');
+
+        burger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+        const closeBtn = document.getElementById('close-menu');
+
+        closeBtn.addEventListener('click', () => {
+            navList.classList.remove('show');
+        });
+    </script>
+</body>
+
+</html>

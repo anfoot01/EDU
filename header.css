@@ -1,0 +1,146 @@
+/* Base header/nav styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+}
+
+.nav-list {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    background: -webkit-linear-gradient(#7c5cff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Burger icon (hidden by default) */
+.burger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #7c5cff;
+}
+
+.close-menu {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Media queries */
+
+/* Medium screens */
+@media (max-width: 900px) {
+    .logo-img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+    }
+
+    .nav-list {
+        gap: 30px;
+    }
+}
+
+/* Smaller screens */
+@media (max-width: 730px) {
+    .logo-img {
+        width: 33px;
+        height: 33px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+    }
+
+    .nav-list {
+        gap: 20px;
+    }
+}
+
+/* Burger menu for <630px */
+
+
+@media (max-width: 630px) {
+    .burger {
+        display: block;
+    }
+
+    .close-menu {
+        display: block;
+    }
+
+    .nav-list {
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        top: -60px;
+        /* hidden offscreen */
+        height: 100vh;
+        width: 250px;
+        background: #0b1220;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* stack items from top */
+        align-items: flex-start;
+        /* align links to left side of menu */
+        gap: 20px;
+        padding: 60px 20px 20px 20px;
+        /* top padding = header height */
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+        transition: right 0.3s ease;
+        z-index: 1000;
+
+    }
+
+    .nav-list.show {
+        right: 0;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        width: 100%;
+        text-align: left;
+        /* make links align nicely */
+    }
+
+    .close-menu {
+        font-size: 28px;
+        cursor: pointer;
+        color: #fff;
+        align-self: flex-end;
+        /* top-right corner */
+        margin-bottom: 20px;
+    }
+}
