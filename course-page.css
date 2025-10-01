@@ -16,130 +16,131 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
-    * {
-        box-sizing: border-box;
-    }
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 70px;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 2;
+}
+
+body {
+    background: radial-gradient(600px 400px at 10% 20%, rgba(124, 92, 255, 0.12), transparent),
+        radial-gradient(500px 300px at 90% 80%, rgba(0, 212, 255, 0.06), transparent),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+    color: #e6eef8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h1,
+h2 {
+    color: #fff;
+}
+
+pre {
+    background: #1e1e1e;
+    color: #f8f8f2;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.module {
+    background: #222;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #071027;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(124, 92, 255, 0.16);
+    transition: transform .12s ease, box-shadow .12s ease;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+
+.answer {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#00aeff, #114875);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1000px) {
 
     .container {
-        margin: 70px;
-        margin-top: 20px;
+        margin: 30px;
+        margin-top: 0;
         font-family: Arial, sans-serif;
         line-height: 2;
     }
 
     body {
-        background: radial-gradient(600px 400px at 10% 20%, rgba(124, 92, 255, 0.12), transparent),
-            radial-gradient(500px 300px at 90% 80%, rgba(0, 212, 255, 0.06), transparent),
-            linear-gradient(180deg, var(--bg1), var(--bg2));
-        color: #e6eef8;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        font-size: 15px;
     }
 
     h1 {
-        font-size: 40px;
-    }
-
-    h1,
-    h2 {
-        color: #fff;
-    }
-
-    pre {
-        background: #1e1e1e;
-        color: #f8f8f2;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-
-    .module {
-        background: #222;
-        padding: 20px;
-        margin-bottom: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        font-size: 32px;
     }
 
     button {
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-        color: #071027;
-        border: none;
-        padding: 14px 22px;
-        border-radius: 10px;
-        font-size: 18px;
-        font-weight: 700;
-        cursor: pointer;
-        box-shadow: 0 10px 30px rgba(124, 92, 255, 0.16);
-        transition: transform .12s ease, box-shadow .12s ease;
-        display: inline-flex;
-        gap: 10px;
-        align-items: center;
+        font-size: 14px;
+        padding: 10px 14px;
     }
 
+    pre,
+    code {
+        font-size: 11px;
+    }
+}
 
+@media (max-width: 600px) {
 
-    .answer {
-        margin-top: 5px;
-        font-size: 18px;
-        font-weight: 700;
-        background: -webkit-linear-gradient(#00aeff, #114875);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    .container {
+        margin: 20px;
+
+        font-family: Arial, sans-serif;
+        line-height: 2;
     }
 
-    @media (max-width: 1000px) {
-
-        .container {
-            margin: 30px;
-            margin-top: 0;
-            font-family: Arial, sans-serif;
-            line-height: 2;
-        }
-
-        body {
-            font-size: 15px;
-        }
-
-        h1 {
-            font-size: 32px;
-        }
-
-        button {
-            font-size: 14px;
-            padding: 10px 14px;
-        }
-
-        pre,
-        code {
-            font-size: 11px;
-        }
+    body {
+        font-size: 13px;
     }
 
-    @media (max-width: 600px) {
-
-        .container {
-            margin: 20px;
-
-            font-family: Arial, sans-serif;
-            line-height: 2;
-        }
-
-        body {
-            font-size: 13px;
-        }
-
-        h1 {
-            font-size: 20px;
-        }
-
-        button {
-            font-size: 12px;
-            padding: 6px 10px;
-        }
-
-        pre,
-        code {
-            font-size: 11px;
-        }
+    h1 {
+        font-size: 20px;
     }
+
+    button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    pre,
+    code {
+        font-size: 11px;
+    }
+}
