@@ -11,15 +11,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
     <link rel="manifest" href="./img/site.webmanifest">
-</head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VBCKQFRCH2"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBCKQFRCH2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-VBCKQFRCH2');
-</script>
+        gtag('config', 'G-VBCKQFRCH2');
+    </script>
+
+</head>
 
 <body>
     <div class="container">
@@ -214,7 +215,22 @@ function sayHello() {
         function showAnswer(btn, text) {
             const div = btn.nextElementSibling;
             div.textContent = "Answer: " + text;
+
+            // GA4 Event
+            gtag('event', 'quiz_answered', {
+                'event_category': 'Quiz',
+                'event_label': btn.closest('.module').querySelector('h2').innerText,
+                'answer': text
+            });
         }
+        document.querySelectorAll('.nav-link a').forEach(link => {
+            link.addEventListener('click', () => {
+                gtag('event', 'navigate_course', {
+                    'event_category': 'Navigation',
+                    'event_label': link.textContent
+                });
+            });
+        });
 
         const burger = document.getElementById('burger');
         const navList = document.querySelector('.nav-list');
