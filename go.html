@@ -33,248 +33,280 @@
             </nav>
         </header>
         <h1>
-            Course <i>"SQL Mini Course"</i></h1>
+            Course <i>"Go (Golang) - Mini Course"</i></h1>
 
         <!-- Module 1 -->
         <div class="module">
-            <h2>Module 1. Introduction to Databases and SQL</h2>
-            <p><b>Theory:</b> JSQL (Structured Query Language) is the standard language for working with relational
-                databases.
-                It is used to create, read, update, and delete data (CRUD operations).</p>
+            <h2>Module 1. Introduction to Go</h2>
+            <p><b>Theory:</b> Go is a compiled, statically typed language created by Google. It is fast, simple, and
+                great for concurrency and scalable systems.</p>
+            <pre><code>package main
+import "fmt"
 
-            <pre><code>CREATE DATABASE school;</code></pre>
-            <p><b>Practice:</b> Create a database called school.</p>
-            <p><b>Quiz:</b> What does SQL stand for?</p>
-            <button onclick="showAnswer(this, 'Structured Query Language')">Check</button>
+func main() {
+    fmt.Println("Hello, Go!")
+}</code></pre>
+            <p><b>Practice:</b> Install Go and print "Hello, Go!".</p>
+            <p><b>Quiz: </b>Is Go compiled or interpreted?</p>
+            <button onclick="showAnswer(this, 'Compiled')">Check</button>
             <div class="answer"></div>
         </div>
 
         <!-- Module 2 -->
         <div class="module">
-            <h2>Module 2. Tables and Data Types</h2>
-            <p><b>Theory:</b> A database consists of tables. Each table has columns (fields) and rows (records).
-            </p>
-            <p>Common SQL data types:
-            </p>
+            <h2>Module 2. Variables and Data Types</h2>
+            <p><b>Theory:</b></p>
             <ul>
-                <li><code>INT</code> – whole numbers</li>
-                <li><code>VARCHAR(n)</code> - text of length n</li>
-                <li><code>DATE</code> - dates</li>
-                <li><code>BOOLEAN</code> - true/false</li>
+                <li>Declare with <code> var </code> or <code> := </code>. </li>
+                <li>Types: <code> int, float64, string, bool </code>.</li>
+                <li>Zero values: numbers → 0, strings → "", bool → false.</li>
             </ul>
-            <pre><code>CREATE TABLE students (
-    id INT PRIMARY KEY,
-    name VARCHAR(50),
-    age INT
-);</code></pre>
-            <p><b>Practice:</b> Create a table students with columns: id, name, age.
+            <pre><code>package main
+import "fmt"
+
+func main() {
+    var age int = 21
+    name := "Alice"
+    isStudent := true
+
+    fmt.Println(name, age, isStudent)
+}</code></pre>
+            <p><b>Practice:</b> Create variables: name (string), age (int), isStudent (bool). Print them.
             </p>
-            <p><b>Quiz:</b> Which keyword is used to define a table?</p>
-            <button onclick="showAnswer(this, 'CREATE TABLE')">Check</button>
+            <p><b>Quiz:</b> Which operator allows short declaration?</p>
+            <button onclick="showAnswer(this, ':=')">Check</button>
             <div class="answer"></div>
         </div>
 
         <!-- Module 3 -->
         <div class="module">
-            <h2>Module 3. Inserting Data</h2>
-            <p><b>Theory:</b> Insert new rows into a table with <code> INSERT INTO </code>.</p>
+            <h2>Module 3. Constants</h2>
+            <p><b>Theory: </b>Use <code> const </code>for values that don’t change. Constants are immutable.</p>
 
-            <pre><code>INSERT INTO students (id, name, age) VALUES (1, 'Alice', 20);
-INSERT INTO students (id, name, age) VALUES (2, 'Bob', 22);
-INSERT INTO students (id, name, age) VALUES (3, 'Charlie', 21);</code></pre>
-            <p><b>Practice: </b>Insert three students into the students table.</p>
-            <p><b>Quiz: </b>Insert three students into the students table.</p>
-            <button onclick="showAnswer(this, 'INSERT')">Check</button>
+            <pre><code>package main
+import "fmt"
+
+func main() {
+    const Pi = 3.14159
+    fmt.Println("Pi =", Pi)
+}</code></pre>
+            <p><b>Practice: </b>Create a constant for Pi and print it.</p>
+            <p><b>Quiz: </b>Which keyword defines constants?</p>
+            <button onclick="showAnswer(this, 'const')">Check</button>
             <div class="answer"></div>
         </div>
 
         <!-- Module 4 -->
         <div class="module">
-            <h2>Module 4. Selecting Data</h2>
-            <p><b>Theory:</b> Retrieve data using <code> SELECT </code>.
-            </p>
-            <p> Common SQL data types:
-            </p>
+            <h2>Module 4. Operators</h2>
+            <p><b>Theory:</b></p>
             <ul>
-                <li><code>SELECT *</code> → all columns</li>
-                <li><code>SELECT name, age</code> → specific columns</li>
+                <li>Arithmetic: <code> + - * / % </code></li>
+                <li>Comparison: <code> == != > < >= <= </code></li>
+                <li>Logical: <code> && || ! </code></li>
             </ul>
-            <pre><code>SELECT name, age FROM students;</code></pre>
-            <p><b>Practice:</b> Get all students’ names and ages.</p>
-            <p><b>Quiz:</b> Which symbol selects all columns?</p>
-            <button onclick="showAnswer(this, '*')">Check</button>
+            <pre><code>package main
+import "fmt"
+
+func main() {
+    x := 15
+    fmt.Println(x > 10 && x < 20) // true
+    fmt.Println(10 % 3)           // 1
+}
+</code></pre>
+            <p><b>Practice:</b> Check if a number is between 10 and 20.</p>
+            <p><b>Quiz:</b> What does % do?</p>
+            <button onclick="showAnswer(this, 'Modulus (remainder)')">Check</button>
             <div class="answer"></div>
         </div>
 
         <!-- Module 5 -->
         <div class="module">
-            <h2>Module 5. Filtering with WHERE</h2>
-            <p><b>Theory:</b> Use <code> WHERE to filter results. </code></p>
-            <p>Operators: <code> =, >, <, >=, <=, <> </code> (not equal).</p>
+            <h2>Module 5. Conditionals</h2>
+            <p><b>Theory:</b> Go uses <code> if, else if </code>, and <code> else </code>. No parentheses needed.</code>
+            </p>
+            <pre><code>package main
+import "fmt"
 
-            <pre><code>SELECT * FROM students
-WHERE age > 20;</code></pre>
-            <p><b>Practice:</b> Find all students older than 20.</p>
-            <p><b>Quiz: </b>Which keyword is used to filter rows?</p>
-            <button onclick="showAnswer(this, 'WHERE')">Check</button>
+func main() {
+    num := -3
+    if num > 0 {
+        fmt.Println("Positive")
+    } else if num < 0 {
+        fmt.Println("Negative")
+    } else {
+        fmt.Println("Zero")
+    }
+}</code></pre>
+            <p><b>Practice:</b> Check if a number is positive, negative, or zero.</p>
+            <p><b>Quiz: </b>Does Go require parentheses around conditions?</p>
+            <button onclick="showAnswer(this, 'No')">Check</button>
             <div class="answer"></div>
         </div>
 
         <!-- Module 6 -->
         <div class="module">
-            <h2>Module 6. Sorting with ORDER BY</h2>
-            <p><b>Theory:</b> Sort results with <code> ORDER BY </code>.</p>
-            <ul>
-                <li><code>ASC</code> → ascending (default)</li>
-                <li><code>DESC</code> → descending</li>
-            </ul>
-            <pre><code>SELECT * FROM students
-ORDER BY age ASC;</code></pre>
-            <p><b>Practice: </b>List students ordered by age (youngest first).</p>
-            <p><b>Quiz: </b> Which clause sorts query results?</p>
-            <button onclick="showAnswer(this, 'ORDER BY')">Check</button>
+            <h2>Module 6. Loops</h2>
+            <p><b>Theory:</b> Go has only one loop: <code>for </code>.</p>
+            <p>Forms: classic <code>for </code>range-based <code> for </code>, infinite loop.</p>
+            <pre><code>package main
+import "fmt"
+
+func main() {
+    for i := 1; i <= 10; i++ {
+        fmt.Println(i)
+    }
+}
+</code></pre>
+            <p><b>Practice: </b>Print numbers from 1 to 10.</p>
+            <p><b>Quiz: </b> Which loop type does Go have?</p>
+            <button onclick="showAnswer(this, 'Only for')">Check</button>
             <div class="answer"></div>
         </div>
 
         <!-- Module 7 -->
         <div class="module">
-            <h2>Module 7. Limiting Results</h2>
-            <p><b>Theory:</b> Use <code> LIMIT </code> (MySQL, PostgreSQL) or <code> TOP </code> (SQL Server) to
-                restrict number of rows.</p>
-            <pre><code>SELECT * FROM students
-LIMIT 2;</code></pre>
-            <p><b>Practice: </b>Get the first 2 students.</p>
-            <p><b>Quiz: </b> Which keyword restricts the number of returned rows?</p>
-            <button onclick="showAnswer(this, 'LIMIT')">Check</button>
+            <h2>Module 7. Functions</h2>
+            <p><b>Theory: </b>Functions are defined with <code> func </code>. They can return multiple values.</p>
+            <pre><code>package main
+import "fmt"
+
+func add(a int, b int) int {
+    return a + b
+}
+
+func main() {
+    fmt.Println(add(3, 5)) // 8
+}
+</code></pre>
+            <p><b>Practice: </b>Write a function to add two numbers.</p>
+            <p><b>Quiz: </b> Write a function to add two numbers.</p>
+            <button onclick="showAnswer(this, 'func')">Check</button>
             <div class="answer"></div>
         </div>
 
         <!-- Module 8 -->
         <div class="module">
-            <h2>Module 8. Updating Data</h2>
-            <p><b>Theory:</b> Change existing data with <code> UPDATE. </code></p>
-            <pre><code>UPDATE students
-SET age = 21
-WHERE name = 'Alice';</code></pre>
-            <p><b>Practice: </b> Change Alice’s age to 21.</p>
-            <p><b>Quiz: </b> Which keyword updates rows?</p>
-            <button onclick="showAnswer(this, 'UPDATE')">Check</button>
+            <h2>Module 8. Arrays and Slices</h2>
+            <p><b>Theory:</b> </p>
+            <ul>
+                <li>Arrays: fixed length.</li>
+                <li>Slices: dynamic, more common in Go.</li>
+            </ul>
+            <pre><code>package main
+import "fmt"
+
+func main() {
+    fruits := []string{"apple", "banana", "orange"}
+    fmt.Println(fruits[0])  // apple
+    fmt.Println(len(fruits)) // 3
+}
+</code></pre>
+            <p><b>Practice: </b> Create a slice of fruits and print the first one.</p>
+            <p><b>Quiz: </b> Which is more common in Go: arrays or slices?</p>
+            <button onclick="showAnswer(this, 'Slices')">Check</button>
             <div class="answer"></div>
         </div>
 
         <!-- Module 9 -->
         <div class="module">
-            <h2>Module 9. Deleting Data</h2>
-            <p><b>Theory:</b> Remove rows with <code> DELETE </code>. Be careful: without <code> WHERE </code> it
-                deletes everything!</p>
-            <pre><code>DELETE FROM students
-WHERE name = 'Bob';</code></pre>
-            <p><b>Practice: </b>Delete Bob from the table.</p>
-            <p><b>Quiz: </b> Which keyword deletes rows?</p>
-            <button onclick="showAnswer(this, 'DELETE')">Check</button>
+            <h2>Module 9. Maps</h2>
+            <p><b>Theory: </b>Maps store key-value pairs. Keys must be unique.</p>
+            <pre><code>package main
+import "fmt"
+
+func main() {
+    capitals := map[string]string{
+        "USA": "Washington",
+        "UK":  "London",
+    }
+    fmt.Println(capitals["USA"])
+}
+</code></pre>
+            <p><b>Practice: </b>Create a map of countries and capitals.</p>
+            <p><b>Quiz: </b> What Go type stores key-value pairs?</p>
+            <button onclick="showAnswer(this, 'Map')">Check</button>
             <div class="answer"></div>
         </div>
 
         <!-- Module 10 -->
         <div class="module">
-            <h2>Module 10. Aggregate Functions</h2>
-            <p><b>Theory:</b>Aggregate functions work on multiple rows: </p>
-            <ul>
-                <li> <code> COUNT() </code> – number of rows</li>
-                <li> <code> SUM() </code> – total</li>
-                <li> <code> AVG() </code> – average</li>
-                <li> <code> MIN() / MAX() </code></li>
-            </ul>
-            <pre><code>SELECT AVG(age) AS average_age FROM students;</code></pre>
-            <p><b>Practice: </b> Find the average age of students.</p>
-            <p><b>Quiz: </b>Which function gives the number of rows?</p>
-            <button onclick="showAnswer(this, 'COUNT()')">Check</button>
+            <h2>Module 10. Structs</h2>
+            <p><b>Theory:</b> Structs group related fields. They are similar to classes without methods.</p>           
+            <pre><code>package main
+import "fmt"
+
+type Person struct {
+    name string
+    age  int
+}
+
+func main() {
+    p := Person{name: "Alice", age: 21}
+    fmt.Println(p.name, p.age)
+}
+</code></pre>
+            <p><b>Practice: </b> Create a struct <code> Person </code> with <code> name </code> and <code> age </code>.</p>
+            <p><b>Quiz: </b>Which keyword defines a struct?</p>
+            <button onclick="showAnswer(this, 'type ... struct')">Check</button>
             <div class="answer"></div>
         </div>
 
         <!-- Module 11 -->
         <div class="module">
-            <h2>Module 11. GROUP BY and HAVING</h2>
-            <p><b>Theory:</b></p>
-            <ul>
-                <li> <code> GROUP BY</code> groups rows by column values.</li>
-                <li> <code> HAVING </code> filters groups (like <code> WHERE </code>, but for aggregates).</li>
-            </ul>
+            <h2>Module 11. Pointers</h2>
+            <p><b>Theory:</b> Pointers hold memory addresses. Use <code> & </code> to get address, <code> * </code> to dereference.</p>
+            <pre><code>package main
+import "fmt"
 
-            <pre><code>SELECT age, COUNT(*) AS count
-FROM students
-GROUP BY age;</code></pre>
-            <p><b>Practice: </b>Count how many students have each age.</p>
-            <p><b>Quiz: </b>Which clause groups rows with the same values?</p>
-            <button onclick="showAnswer(this, 'GROUP BY')">Check</button>
+func main() {
+    x := 10
+    p := &x
+    *p = 20
+    fmt.Println(x) // 20
+}
+</code></pre>
+            <p><b>Practice: </b>Create a pointer to an integer and change its value.</p>
+            <p><b>Quiz: </b>Which symbol gets the address of a variable?</p>
+            <button onclick="showAnswer(this, '&')">Check</button>
             <div class="answer"></div>
         </div>
 
         <!-- Module 12 -->
         <div class="module">
-            <h2>Module 12. Joins</h2>
-            <p><b>Theory:</b>Join combines rows from multiple tables:</p>
-            <ul>
-                <li> <code> INNER JOIN</code> – matching rows only</li>
-                <li> <code> LEFT JOIN</code> – all from left + matches</li>
-                <li> <code> RIGHT JOIN</code> – all from right + matches</li>
-            </ul>
+            <h2>Module 12. Concurrency with Goroutines</h2>
+            <p><b>Theory:</b> Goroutines allow concurrent execution. Use <code> go </code> keyword before a function.</p>
+            <pre><code>package main
+import (
+    "fmt"
+    "time"
+)
 
-            <pre><code>CREATE TABLE courses (
-    student_id INT,
-    course_name VARCHAR(50)
-);
+func say(msg string) {
+    for i := 0; i < 3; i++ {
+        fmt.Println(msg)
+        time.Sleep(time.Millisecond * 500)
+    }
+}
 
-INSERT INTO courses VALUES (1, 'Math'), (3, 'Physics');
-
-SELECT students.name, courses.course_name
-FROM students
-INNER JOIN courses ON students.id = courses.student_id;</code></pre>
-            <p><b>Practice:</b> Join <code> students </code> with a new table
-                <code> courses(student_id, course_name) </code>.
-            </p>
-            <p><b>Quiz:</b> Which join keeps only rows with matches in both tables?</p>
-            <button onclick="showAnswer(this, 'INNER JOIN')">Check</button>
+func main() {
+    go say("Hello")
+    say("World")
+}
+</code></pre>
+            <p><b>Practice:</b> Run two functions concurrently.</p>
+            <p><b>Quiz:</b> Which keyword starts a goroutine?</p>
+            <button onclick="showAnswer(this, 'go')">Check</button>
             <div class="answer"></div>
         </div>
 
         <!-- Module 13 -->
         <div class="module">
-            <h2>Module 13. Subqueries</h2>
-            <p><b>Theory:</b>A subquery is a query inside another query. </p>
-            <pre><code>SELECT name, age
-FROM students
-WHERE age > (SELECT AVG(age) FROM students);</code></pre>
-            <p><b>Practice:</b> Find students older than the average age.</p>
-            <p><b>Quiz:</b>What is a query inside another query called?</p>
-            <button onclick="showAnswer(this, 'Subquery')">Check</button>
-            <div class="answer"></div>
-        </div>
-
-        <!-- Module 14 -->
-        <div class="module">
-            <h2>Module 14. Constraints and Keys</h2>
-            <p><b>Theory:</b></p>
+            <h2>Module 13. Mini Projects</h2>
             <ul>
-                <li> <code> PRIMARY KEY</code> – unique identifier</li>
-                <li> <code> FOREIGN KEY</code> – reference to another table</li>
-                <li> <code> NOT NULL, UNIQUE, DEFAULT</code> </li>
-            </ul>
-
-            <pre><code>ALTER TABLE students
-ADD CONSTRAINT pk_students PRIMARY KEY (id);</code></pre>
-            <p><b>Practice:</b>Add a <code> PRIMARY KEY </code> to <code> students(id)</code>.</p>
-            <p><b>Quiz:</b>Which constraint ensures unique row identification?</p>
-            <button onclick="showAnswer(this, 'PRIMARY KEY')">Check</button>
-            <div class="answer"></div>
-        </div>
-        <!-- Module 15 -->
-        <div class="module">
-            <h2>Module 15. Mini Projects</h2>
-            <ul>
-                <li>Create tables for <code> students, courses, enrollments.</code></li>
-                <li> Insert sample data.</li>
-                <li> Write queries.</li>
+                <li>To-Do List (CLI) - Add, view, and remove tasks.</li>
+                <li>Calculator (CLI) - Perform basic arithmetic operations.</li>
+                <li>Guess the Number - Random number guessing game with hints.</li>
             </ul>
         </div>
 

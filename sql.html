@@ -178,7 +178,7 @@ WHERE name = 'Bob';</code></pre>
         <!-- Module 10 -->
         <div class="module">
             <h2>Module 10. Aggregate Functions</h2>
-            <p><b>Theory:</b>Aggregate functions work on multiple rows: </p>
+            <p><b>Theory: </b>Aggregate functions work on multiple rows: </p>
             <ul>
                 <li> <code> COUNT() </code> – number of rows</li>
                 <li> <code> SUM() </code> – total</li>
@@ -213,7 +213,7 @@ GROUP BY age;</code></pre>
         <!-- Module 12 -->
         <div class="module">
             <h2>Module 12. Joins</h2>
-            <p><b>Theory:</b>Join combines rows from multiple tables:</p>
+            <p><b>Theory: </b>Join combines rows from multiple tables:</p>
             <ul>
                 <li> <code> INNER JOIN</code> – matching rows only</li>
                 <li> <code> LEFT JOIN</code> – all from left + matches</li>
@@ -241,12 +241,12 @@ INNER JOIN courses ON students.id = courses.student_id;</code></pre>
         <!-- Module 13 -->
         <div class="module">
             <h2>Module 13. Subqueries</h2>
-            <p><b>Theory:</b>A subquery is a query inside another query. </p>
+            <p><b>Theory: </b>A subquery is a query inside another query. </p>
             <pre><code>SELECT name, age
 FROM students
 WHERE age > (SELECT AVG(age) FROM students);</code></pre>
             <p><b>Practice:</b> Find students older than the average age.</p>
-            <p><b>Quiz:</b>What is a query inside another query called?</p>
+            <p><b>Quiz: </b>What is a query inside another query called?</p>
             <button onclick="showAnswer(this, 'Subquery')">Check</button>
             <div class="answer"></div>
         </div>
@@ -263,8 +263,8 @@ WHERE age > (SELECT AVG(age) FROM students);</code></pre>
 
             <pre><code>ALTER TABLE students
 ADD CONSTRAINT pk_students PRIMARY KEY (id);</code></pre>
-            <p><b>Practice:</b>Add a <code> PRIMARY KEY </code> to <code> students(id)</code>.</p>
-            <p><b>Quiz:</b>Which constraint ensures unique row identification?</p>
+            <p><b>Practice: </b>Add a <code> PRIMARY KEY </code> to <code> students(id)</code>.</p>
+            <p><b>Quiz: </b>Which constraint ensures unique row identification?</p>
             <button onclick="showAnswer(this, 'PRIMARY KEY')">Check</button>
             <div class="answer"></div>
         </div>
