@@ -12,9 +12,15 @@ header {
 
 
 .logo {
+
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.logo a {
+    width: 44px;
+    height: 44px;
 }
 
 .logo-img {
