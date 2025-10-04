@@ -84,9 +84,7 @@ button {
     margin-top: 5px;
     font-size: 18px;
     font-weight: 700;
-    background: -webkit-linear-gradient(#00aeff, #114875);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #7fc5ff;
 }
 
 @media (max-width: 1000px) {
