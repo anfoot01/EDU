@@ -7,13 +7,16 @@
 
   <!-- SEO -->
   <title>LearnCodee — Free Coding Courses & Exercises (Python, JavaScript, SQL, Rust, Go, C++)</title>
-  <meta name="description" content="LearnCodee — free programming courses with practical coding exercises. Learn Python, JavaScript, SQL, Rust, Go and C++ step by step.">
-  <meta name="keywords" content="learn programming, free coding courses, learn Python online, JavaScript exercises, SQL practice, Rust tutorial, Go programming, C++ basics">
+  <meta name="description"
+    content="LearnCodee — free programming courses with practical coding exercises. Learn Python, JavaScript, SQL, Rust, Go and C++ step by step.">
+  <meta name="keywords"
+    content="learn programming, free coding courses, learn Python online, JavaScript exercises, SQL practice, Rust tutorial, Go programming, C++ basics">
   <link rel="canonical" href="https://learncodee.netlify.app/">
 
   <!-- Open Graph (Facebook, LinkedIn, Telegram) -->
   <meta property="og:title" content="LearnCodee — Free Coding Courses & Exercises">
-  <meta property="og:description" content="Learn programming for free! Python, JavaScript, SQL, Go, Rust, and C++ — practical exercises and structured courses.">
+  <meta property="og:description"
+    content="Learn programming for free! Python, JavaScript, SQL, Go, Rust, and C++ — practical exercises and structured courses.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://learncodee.netlify.app/">
   <meta property="og:image" content="https://learncodee.netlify.app/preview.png">
@@ -21,7 +24,8 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="LearnCodee — Free Coding Courses & Exercises">
-  <meta name="twitter:description" content="Learn programming for free! Python, JavaScript, SQL, Go, Rust, and C++ — practical exercises and structured courses.">
+  <meta name="twitter:description"
+    content="Learn programming for free! Python, JavaScript, SQL, Go, Rust, and C++ — practical exercises and structured courses.">
   <meta name="twitter:image" content="https://learncodee.netlify.app/preview.png">
 
   <!-- Styles -->
@@ -58,7 +62,7 @@
             <p>Let's learn programming languages - quickly and easily</p>
           </div>
         </div>
-        <div class="kv">Free courses · Practical exercises  </div>
+        <div class="kv">Free courses · Practical exercises </div>
       </header>
 
       <section class="hero" aria-label="Choose a programming language to learn">
@@ -68,10 +72,27 @@
             Select a language below, click <strong>Start</strong>
             and start learning with practical examples and a selection of courses.</p>
 
-          <div class="lang-grid" id="langGrid" role="listbox" aria-label="Programming languages" >
+          <div class="lang-grid" id="langGrid" role="listbox" aria-label="Programming languages">
+
+            <!-- HTML & CSS -->
+            <div class="lang-card" data-lang="HTML & CSS" role="option" tabindex="0">
+              <div class="lang-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <path d="M3 3h18l-1.5 17L12 22l-7.5-2L3 3z" fill="#E44D26" />
+                  <path d="M12 4v15.3l5.8-1.6L18.5 4H12z" fill="#F16529" />
+                  <path d="M7 8h10l-.3 2H9.4l.2 2h7.8l-.5 5-4.9 1.3-4.9-1.3-.3-3H9l.1 1.5 2.9.8 2.9-.8.2-2.5H7.1L7 8z"
+                    fill="#fff" />
+                </svg>
+              </div>
+              <div>
+                <div style="font-weight:700">HTML & CSS</div>
+                <div class="small">Web design and page layout</div>
+              </div>
+            </div>
+
+            <!-- Python -->
             <div class="lang-card" data-lang="Python" role="option" tabindex="0">
               <div class="lang-icon" aria-hidden="true">
-                <!-- Python snake SVG simplified -->
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M7 2h6v2H9v2h4c1.7 0 3 1.3 3 3v2H7V2z" fill="#FFD43B" />
                   <path d="M17 22h-6v-2h4v-2H9c-1.7 0-3-1.3-3-3V14h11v8z" fill="#306998" />
@@ -83,6 +104,7 @@
               </div>
             </div>
 
+            <!-- JavaScript -->
             <div class="lang-card" data-lang="JavaScript" role="option" tabindex="0">
               <div class="lang-icon" aria-hidden="true">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -98,6 +120,7 @@
               </div>
             </div>
 
+            <!-- SQL -->
             <div class="lang-card" data-lang="SQL" role="option" tabindex="0">
               <div class="lang-icon" aria-hidden="true">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -111,6 +134,7 @@
               </div>
             </div>
 
+            <!-- Go -->
             <div class="lang-card" data-lang="Go" role="option" tabindex="0">
               <div class="lang-icon" aria-hidden="true">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -120,11 +144,11 @@
               </div>
               <div>
                 <div style="font-weight:700">Go</div>
-                <div class="small">
-                  Server applications, high-performance services</div>
+                <div class="small">Server applications, high-performance services</div>
               </div>
             </div>
 
+            <!-- Rust -->
             <div class="lang-card" data-lang="Rust" role="option" tabindex="0">
               <div class="lang-icon" aria-hidden="true">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -138,6 +162,7 @@
               </div>
             </div>
 
+            <!-- C++ -->
             <div class="lang-card" data-lang="C++" role="option" tabindex="0">
               <div class="lang-icon" aria-hidden="true">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -147,11 +172,12 @@
               </div>
               <div>
                 <div style="font-weight:700">C++</div>
-                <div class="small">
-                  Productivity apps, games, engines</div>
+                <div class="small">Productivity apps, games, engines</div>
               </div>
             </div>
+
           </div>
+
         </div>
 
         <aside class="cta" aria-label="Start of training">
@@ -246,6 +272,7 @@
       let selectedLang = "";
 
       const langToPage = {
+        "HTML & CSS": "html-css.html",
         "Python": "python.html",
         "JavaScript": "javascript.html",
         "Go": "go.html",

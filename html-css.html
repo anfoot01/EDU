@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Learn HTML & CSS Online — Free Course with Exercises | LearnCodee</title>
+    <meta name="description"
+        content="Learn HTML and CSS step by step with free lessons and coding exercises. Build real web pages with LearnCodee — perfect for beginners.">
+    <meta name="keywords"
+        content="learn HTML CSS online free, HTML tutorial, CSS basics, web development course, responsive design, frontend coding practice">
+    <link rel="canonical" href="https://learncodee.netlify.app/html-css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Learn HTML & CSS Online — Free Course with Exercises">
+    <meta property="og:description"
+        content="Learn HTML and CSS with free coding lessons and practical projects. Start building web pages today.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://learncodee.netlify.app/html-css">
+    <meta property="og:image" content="https://learncodee.netlify.app/preview-html-css.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Learn HTML & CSS Online — Free Course with Exercises">
+    <meta name="twitter:description"
+        content="Step-by-step HTML and CSS lessons for beginners. Learn how to design and style real websites.">
+    <meta name="twitter:image" content="https://learncodee.netlify.app/preview-html-css.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="course-page.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="manifest" href="./img/site.webmanifest">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBCKQFRCH2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-VBCKQFRCH2');
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <div class="logo" aria-hidden="true">
+                <a href="./index.html">
+                    <img class="logo-img" src="./img/android-chrome-512x512.png" alt="logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <div class="burger" id="burger">&#9776;</div>
+                <ul class="nav-list">
+                    <li><span class="close-menu" id="close-menu">&times;</span></li>
+                    <li class="nav-link"><a href="./html-css.html">HTML & CSS</a></li>
+                    <li class="nav-link" data-section="Python"><a href="./python.html">Python</a></li>
+                    <li class="nav-link" data-section="Javascript"><a href="./javascript.html">Javascript</a></li>
+                    <li class="nav-link" data-section="SQL"><a href="./sql.html">SQL</a></li>
+                    <li class="nav-link" data-section="Go"><a href="./go.html">Go</a></li>
+                    <li class="nav-link" data-section="Rust"><a href="./rust.html">Rust</a></li>
+                    <li class="nav-link" data-section="C++"><a href="./cpp.html">C++</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>Course <i>"HTML & CSS"</i></h1>
+
+        <!-- Module 1 -->
+        <div class="module">
+            <h2>Module 1. Introduction to HTML & CSS</h2>
+            <p><b>Theory:</b> HTML (HyperText Markup Language) defines the structure of a web page, while CSS (Cascading
+                Style
+                Sheets) controls its design and layout. Together, they form the foundation of web development.</p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello World&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, HTML!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <p><b>Practice:</b> Create a basic HTML page that displays “Hello, HTML!”.</p>
+            <p><b>Quiz:</b> What does HTML stand for?</p>
+            <button onclick="showAnswer(this, 'HyperText Markup Language')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="module">
+            <h2>Module 2. HTML Structure & Elements</h2>
+            <p><b>Theory:</b> HTML uses tags to define elements. Common ones include headings, paragraphs, links, and
+                images.</p>
+            <pre><code>&lt;h1&gt;Welcome&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;a href="https://learncodee.netlify.app"&gt;Visit LearnCodee&lt;/a&gt;
+&lt;img src="image.jpg" alt="Example"&gt;</code></pre>
+            <p><b>Practice:</b> Add a heading, a paragraph, and an image to your page.</p>
+            <p><b>Quiz:</b> Which tag is used for links?</p>
+            <button onclick="showAnswer(this, '&lt;a&gt;')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="module">
+            <h2>Module 3. CSS Basics</h2>
+            <p><b>Theory:</b> CSS adds style to HTML elements. It can be written inline, internally (in &lt;style&gt;),
+                or in external
+                files (.css).</p>
+            <pre><code>h1 {
+  color: blue;
+  font-family: Arial;
+}</code></pre>
+            <p><b>Practice:</b> Change your heading color and font.</p>
+            <p><b>Quiz:</b> Which property changes text color?</p>
+            <button onclick="showAnswer(this, 'color')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="module">
+            <h2>Module 4. The Box Model</h2>
+            <p><b>Theory:</b> Every HTML element is a box with content, padding, border, and margin.</p>
+            <pre><code>div {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 20px;
+}</code></pre>
+            <p><b>Practice:</b> Create a styled box with padding and a border.</p>
+            <p><b>Quiz:</b> Which CSS property controls the space inside the element border?</p>
+            <button onclick="showAnswer(this, 'padding')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="module">
+            <h2>Module 5. Layout with Flexbox</h2>
+            <p><b>Theory:</b> Flexbox makes it easier to align and distribute elements in a container.</p>
+            <pre><code>.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}</code></pre>
+            <p><b>Practice:</b> Center an element horizontally and vertically using Flexbox.</p>
+            <p><b>Quiz:</b> Which CSS property activates flex layout?</p>
+            <button onclick="showAnswer(this, 'display: flex')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="module">
+            <h2>Module 6. Responsive Design</h2>
+            <p><b>Theory:</b> Responsive design adapts your layout to different screen sizes using media queries.</p>
+            <pre><code>@media (max-width: 600px) {
+  body {
+    background-color: lightgray;
+  }
+}</code></pre>
+            <p><b>Practice:</b> Change background color for small screens.</p>
+            <p><b>Quiz:</b> Which keyword is used to define responsive rules?</p>
+            <button onclick="showAnswer(this, '@media')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 7 -->
+        <div class="module">
+            <h2>Module 7. CSS Transitions & Effects</h2>
+            <p><b>Theory:</b> Transitions make style changes smooth.</p>
+            <pre><code>button {
+  background: blue;
+  transition: background 0.3s;
+}
+button:hover {
+  background: green;
+}</code></pre>
+            <p><b>Practice:</b> Create a button that changes color smoothly on hover.</p>
+            <p><b>Quiz:</b> Which CSS property defines transition duration?</p>
+            <button onclick="showAnswer(this, 'transition')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 8 -->
+        <div class="module">
+            <h2>Module 8. Final Project</h2>
+            <p><b>Goal:</b> Combine everything you’ve learned.</p>
+            <ul>
+                <li>Build a personal portfolio web page</li>
+                <li>Use Flexbox for layout</li>
+                <li>Include navigation, hero section, and footer</li>
+                <li>Make it responsive for mobile</li>
+            </ul>
+        </div>
+
+        <footer class="footer">
+            <ul class="social-links">
+                <li class="social link"><a
+                        href="https://www.instagram.com/learn_codee?igsh=czlwNDU4bnk1cnJ3">Instagram</a></li>
+                <li class="social link"><a
+                        href="https://www.facebook.com/share/g/1B4pqfaPkA/?mibextid=wwXIfr">Facebook</a></li>
+                <li class="social link"><a href="https://discord.gg/32R3bsj4">Discord</a></li>
+            </ul>
+            <div class="desc">
+                <p>We provide accessible and modern programming courses for beginners. Learn by doing, gain new skills,
+                    and
+                    build your IT career with us.</p>
+                <p>© LearnCodee — 2025</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function showAnswer(btn, text) {
+            const div = btn.nextElementSibling;
+            div.textContent = "Answer: " + text;
+
+            gtag('event', 'quiz_answered', {
+                'event_category': 'Quiz',
+                'event_label': btn.closest('.module').querySelector('h2').innerText,
+                'answer': text
+            });
+        }
+
+        document.querySelectorAll('.nav-link a').forEach(link => {
+            link.addEventListener('click', () => {
+                gtag('event', 'navigate_course', {
+                    'event_category': 'Navigation',
+                    'event_label': link.textContent
+                });
+            });
+        });
+
+        const burger = document.getElementById('burger');
+        const navList = document.querySelector('.nav-list');
+        burger.addEventListener('click', () => navList.classList.toggle('show'));
+        document.getElementById('close-menu').addEventListener('click', () => navList.classList.remove('show'));
+    </script>
+
+</body>
+
+</html>
