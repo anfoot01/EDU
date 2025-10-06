@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Learn React Online — Free Course with JSX | LearnCodee</title>
+    <meta name="description"
+        content="Learn React with JSX step by step. Build components, manage state, handle events, and create real projects. Perfect for beginners.">
+    <meta name="keywords"
+        content="learn React online free, React course, JSX, React components, React hooks, React tutorial for beginners">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Learn React Online — Free Course with JSX">
+    <meta property="og:description"
+        content="Start learning React with JSX. Build interactive web apps using components, state, and props.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://learncodee.netlify.app/javascript/react.html">
+    <meta property="og:image" content="https://learncodee.netlify.app/preview-react.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Learn React Online — Free Course with JSX">
+    <meta name="twitter:description"
+        content="Step by step React course with JSX examples. Create components, manage state, and build projects.">
+    <meta name="twitter:image" content="https://learncodee.netlify.app/preview-react.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../styles/course-page.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/footer.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+    <link rel="manifest" href="../../img/site.webmanifest">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBCKQFRCH2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-VBCKQFRCH2');
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo" aria-hidden="true">
+                <a href="../../index.html">
+                    <img class="logo-img" src="../../img/android-chrome-512x512.png" alt="logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <div class="burger" id="burger">&#9776;</div>
+                <ul class="nav-list">
+                    <li><span class="close-menu" id="close-menu">&times;</span></li>
+                    <li class="nav-link"><a href="../html-css/html-css.html">HTML & CSS</a></li>
+                    <li class="nav-link" data-section="Python"><a href="../python/python.html">Python</a></li>
+                    <li class="nav-link dropdown">
+                        <a href="../javascript/javascript.html" class="dropbtn">JavaScript &#9662;</a>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-media-method"><a href="../javascript/javascript.html">JavaScript</a>
+                            </li>
+                            <li><a href="../javascript/react.html">React</a></li>
+                            <li><a href="../javascript/angular.html">Angular</a></li>
+                            <li><a href="../javascript/vue.html">Vue</a></li>
+                            <li><a href="../javascript/node.html">Node.js</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-link" data-section="SQL"><a href="../sql/sql.html">SQL</a></li>
+                    <li class="nav-link" data-section="Go"><a href="../go/go.html">Go</a></li>
+                    <li class="nav-link" data-section="Rust"><a href="../rust/rust.html">Rust</a></li>
+                    <li class="nav-link" data-section="C++"><a href="../c++/cpp.html">C++</a></li>
+                    <li class="nav-link" data-section="Git"><a href="../github/git.html">Git & GitHub</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>Course <i>"React from Scratch"</i></h1>
+
+        <!-- Module 1 -->
+        <div class="module">
+            <h2>Module 1. Introduction to React</h2>
+            <p><b>Theory:</b> React is a JavaScript library for building user interfaces using <b>components</b> and
+                <b>JSX</b>. It is maintained by Facebook and widely used in modern web development.
+            </p>
+            <p><b>Setup:</b></p>
+            <ul>
+                <li>Install Node.js from <a href="https://nodejs.org/" target="_blank">nodejs.org</a></li>
+                <li>Create a project: <code>npx create-react-app my-app</code></li>
+                <li>Run the project: <code>cd my-app &amp;&amp; npm start</code></li>
+                <li>Project structure:</li>
+                <ul>
+                    <li><code>public/</code> - static files</li>
+                    <li><code>src/</code> - source code (components, App.jsx)</li>
+                    <li><code>package.json</code> - dependencies and scripts</li>
+                </ul>
+            </ul>
+            <p><b>Practice:</b> Create your first React app with <code>create-react-app</code>.</p>
+            <p><b>Quiz:</b> What file usually contains the main component?</p>
+            <button onclick="showAnswer(this, 'App.jsx')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="module">
+            <h2>Module 2. JSX Basics</h2>
+            <p><b>Theory:</b> JSX is a syntax extension for JavaScript. It allows you to write HTML-like code inside
+                JavaScript.</p>
+            <pre><code>
+function Welcome(props) {
+  return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;;
+}
+
+function App() {
+  return &lt;Welcome name="Alice" /&gt;;
+}
+            </code></pre>
+            <p><b>Practice:</b> Create a component that displays your name using JSX.</p>
+            <p><b>Quiz:</b> What does JSX compile into?</p>
+            <button onclick="showAnswer(this, 'React.createElement calls')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="module">
+            <h2>Module 3. Components</h2>
+            <p><b>Theory:</b> Components are reusable UI blocks. There are <b>functional</b> and <b>class</b>
+                components.</p>
+            <pre><code>
+function Header() {
+  return &lt;header&gt;My App&lt;/header&gt;;
+}
+
+class Footer extends React.Component {
+  render() {
+    return &lt;footer&gt;© 2025&lt;/footer&gt;;
+  }
+}
+            </code></pre>
+            <p><b>Practice:</b> Create a Header and Footer component and render them inside App.jsx.</p>
+            <p><b>Quiz:</b> What type of component can use hooks?</p>
+            <button onclick="showAnswer(this, 'Functional components')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="module">
+            <h2>Module 4. Props</h2>
+            <p><b>Theory:</b> Props (properties) allow you to pass data from parent to child components.</p>
+            <pre><code>
+function Greeting(props) {
+  return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+}
+
+function App() {
+  return &lt;Greeting name="Bob" /&gt;;
+}
+            </code></pre>
+            <p><b>Practice:</b> Pass your name as a prop to a Greeting component.</p>
+            <p><b>Quiz:</b> Can props be changed inside the child component?</p>
+            <button onclick="showAnswer(this, 'No, they are read-only')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="module">
+            <h2>Module 5. State</h2>
+            <p><b>Theory:</b> State allows components to manage data that can change over time. Use the
+                <code>useState</code> hook in functional components.
+            </p>
+            <pre><code>
+import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Count: {count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Increment&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+            </code></pre>
+            <p><b>Practice:</b> Create a counter that increments when a button is clicked.</p>
+            <p><b>Quiz:</b> Which hook is used to manage state?</p>
+            <button onclick="showAnswer(this, 'useState')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="module">
+            <h2>Module 6. Events</h2>
+            <p><b>Theory:</b> React handles events similarly to HTML, but with camelCase and functions.</p>
+            <pre><code>
+function App() {
+  function handleClick() {
+    alert('Button clicked!');
+  }
+
+  return &lt;button onClick={handleClick}&gt;Click me&lt;/button&gt;;
+}
+            </code></pre>
+            <p><b>Practice:</b> Create a button that shows an alert when clicked.</p>
+            <p><b>Quiz:</b> How do you attach an onClick handler in JSX?</p>
+            <button onclick="showAnswer(this, 'onClick={functionName}')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 7 -->
+        <div class="module">
+            <h2>Module 7. Conditional Rendering</h2>
+            <p><b>Theory:</b> Render content conditionally using JavaScript expressions inside JSX.</p>
+            <pre><code>
+function Greeting({ isLoggedIn }) {
+  return &lt;div&gt;
+    {isLoggedIn ? 'Welcome back!' : 'Please sign in'}
+  &lt;/div&gt;;
+}
+            </code></pre>
+            <p><b>Practice:</b> Display "Welcome" if a variable is true, otherwise "Login".</p>
+            <p><b>Quiz:</b> Which operator is often used for conditional rendering?</p>
+            <button onclick="showAnswer(this, 'Ternary operator')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 8 -->
+        <div class="module">
+            <h2>Module 8. Lists and Keys</h2>
+            <p><b>Theory:</b> Render arrays using <code>map()</code> and assign a unique <code>key</code> to each
+                element.</p>
+            <pre><code>
+function FruitList() {
+  const fruits = ['Apple', 'Banana', 'Orange'];
+  return &lt;ul&gt;
+    {fruits.map((fruit, index) =&gt; &lt;li key={index}&gt;{fruit}&lt;/li&gt;)}
+  &lt;/ul&gt;;
+}
+            </code></pre>
+            <p><b>Practice:</b> Render a list of your favorite movies.</p>
+            <p><b>Quiz:</b> Why do we need keys when rendering lists?</p>
+            <button onclick="showAnswer(this, 'To help React track elements efficiently')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 9 -->
+        <div class="module">
+            <h2>Module 9. Forms</h2>
+            <p><b>Theory:</b> Handle user input with controlled components.</p>
+            <pre><code>
+function NameForm() {
+  const [name, setName] = useState('');
+
+  return &lt;form&gt;
+    &lt;input value={name} onChange={e =&gt; setName(e.target.value)} /&gt;
+    &lt;p&gt;Hello, {name}&lt;/p&gt;
+  &lt;/form&gt;;
+}
+            </code></pre>
+            <p><b>Practice:</b> Create a form that updates a greeting as you type.</p>
+            <p><b>Quiz:</b> What makes a form input "controlled" in React?</p>
+            <button onclick="showAnswer(this, 'Its value is managed by React state')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 10 -->
+        <div class="module">
+            <h2>Module 10. Mini Projects</h2>
+            <ul>
+                <li><b>Counter App:</b> Increment and decrement a number.</li>
+                <li><b>Todo List:</b> Add and remove tasks dynamically using state.</li>
+                <li><b>Simple Quiz:</b> Display questions and check answers with React state.</li>
+            </ul>
+        </div>
+
+        <footer class="footer">
+            <ul class="social-links">
+                <li class="social link"><a href="https://www.instagram.com/learn_codee?igsh=czlwNDU4bnk1cnJ3"><svg
+                            fill="#9aa4b2" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#b0b0b0"
+                            height="32px" width="32px">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z">
+                                </path>
+                                <path
+                                    d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z">
+                                </path>
+                            </g>
+                        </svg></a></li>
+                <li class="social link"><a href="https://www.facebook.com/share/g/1B4pqfaPkA/?mibextid=wwXIfr"><svg
+                            fill="#9aa4b2" height="32px" width="32px" version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="-337 273 123.5 256" xml:space="preserve" stroke="#9aa4b2">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M-260.9,327.8c0-10.3,9.2-14,19.5-14c10.3,0,21.3,3.2,21.3,3.2l6.6-39.2c0,0-14-4.8-47.4-4.8c-20.5,0-32.4,7.8-41.1,19.3 c-8.2,10.9-8.5,28.4-8.5,39.7v25.7H-337V396h26.5v133h49.6V396h39.3l2.9-38.3h-42.2V327.8z">
+                                </path>
+                            </g>
+                        </svg></a></li>
+                <li class="social link"><a href="https://discord.gg/32R3bsj4"><svg viewBox="0 -28.5 256 256"
+                            version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" fill="#000000 height=" 32px" width="32px">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g>
+                                    <path
+                                        d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
+                                        fill="#9aa4b2" fill-rule="nonzero"> </path>
+                                </g>
+                            </g>
+                        </svg></a></li>
+            </ul>
+            <div class="desc">
+                <p>We provide accessible and modern programming courses for beginners. Learn by doing, gain new skills,
+                    and build your IT career with us.</p>
+                <p>© LearnCode — 2025</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function showAnswer(btn, text) {
+            const div = btn.nextElementSibling;
+            div.textContent = "Answer: " + text;
+
+            // GA4 Event
+            gtag('event', 'quiz_answered', {
+                'event_category': 'Quiz',
+                'event_label': btn.closest('.module').querySelector('h2').innerText,
+                'answer': text
+            });
+        }
+        document.querySelectorAll('.nav-link a').forEach(link => {
+            link.addEventListener('click', () => {
+                gtag('event', 'navigate_course', {
+                    'event_category': 'Navigation',
+                    'event_label': link.textContent
+                });
+            });
+        });
+
+        const burger = document.getElementById('burger');
+        const navList = document.querySelector('.nav-list');
+
+        burger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+        const closeBtn = document.getElementById('close-menu');
+
+        closeBtn.addEventListener('click', () => {
+            navList.classList.remove('show');
+        });
+        document.querySelectorAll('.dropdown > a').forEach(drop => {
+            drop.addEventListener('click', function (e) {
+
+                if (window.innerWidth <= 816) {
+                    e.preventDefault();
+                    const content = this.nextElementSibling;
+                    if (content.style.display === 'flex') {
+                        content.style.display = 'none';
+                    } else {
+                        content.style.display = 'flex';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

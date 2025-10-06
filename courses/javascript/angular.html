@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Learn Angular Online — Free Course | LearnCodee</title>
+    <meta name="description"
+        content="Learn Angular step by step. Build components, modules, services, and projects with TypeScript. Perfect for beginners.">
+    <meta name="keywords"
+        content="learn Angular online free, Angular course, Angular components, TypeScript, Angular tutorial for beginners">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Learn Angular Online — Free Course">
+    <meta property="og:description"
+        content="Step by step Angular course. Build apps using components, modules, services, and TypeScript.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://learncodee.netlify.app/javascript/angular.html">
+    <meta property="og:image" content="https://learncodee.netlify.app/preview-angular.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Learn Angular Online — Free Course">
+    <meta name="twitter:description"
+        content="Learn Angular from scratch. Create components, modules, services, and interactive projects.">
+    <meta name="twitter:image" content="https://learncodee.netlify.app/preview-angular.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../styles/course-page.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/footer.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+    <link rel="manifest" href="../../img/site.webmanifest">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBCKQFRCH2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-VBCKQFRCH2');
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo" aria-hidden="true">
+                <a href="../../index.html">
+                    <img class="logo-img" src="../../img/android-chrome-512x512.png" alt="logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <div class="burger" id="burger">&#9776;</div>
+                <ul class="nav-list">
+                    <li><span class="close-menu" id="close-menu">&times;</span></li>
+                    <li class="nav-link"><a href="../html-css/html-css.html">HTML & CSS</a></li>
+                    <li class="nav-link" data-section="Python"><a href="../python/python.html">Python</a></li>
+                    <li class="nav-link dropdown">
+                        <a href="../javascript/javascript.html" class="dropbtn">JavaScript &#9662;</a>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-media-method"><a href="../javascript/javascript.html">JavaScript</a></li>
+                            <li><a href="../javascript/react.html">React</a></li>
+                            <li><a href="../javascript/angular.html">Angular</a></li>
+                            <li><a href="../javascript/vue.html">Vue</a></li>
+                            <li><a href="../javascript/node.html">Node.js</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-link" data-section="SQL"><a href="../sql/sql.html">SQL</a></li>
+                    <li class="nav-link" data-section="Go"><a href="../go/go.html">Go</a></li>
+                    <li class="nav-link" data-section="Rust"><a href="../rust/rust.html">Rust</a></li>
+                    <li class="nav-link" data-section="C++"><a href="../c++/cpp.html">C++</a></li>
+                    <li class="nav-link" data-section="Git"><a href="../github/git.html">Git & GitHub</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>Course <i>"Angular from Scratch"</i></h1>
+
+        <!-- Module 1 -->
+        <div class="module">
+            <h2>Module 1. Introduction & Setup</h2>
+            <p><b>Theory:</b> Angular is a TypeScript-based framework for building web applications using components,
+                services, and modules.</p>
+            <p><b>Setup:</b></p>
+            <ul>
+                <li>Install Node.js: <a href="https://nodejs.org/" target="_blank">nodejs.org</a></li>
+                <li>Install Angular CLI globally: <code>npm install -g @angular/cli</code></li>
+                <li>Create a project: <code>ng new my-angular-app</code></li>
+                <li>Run the project: <code>cd my-angular-app &amp;&amp; ng serve</code></li>
+                <li>Project structure overview:
+                    <ul>
+                        <li><code>src/app/</code> - main application files</li>
+                        <li><code>app.component.ts/html/css</code> - root component</li>
+                        <li><code>angular.json</code> - project configuration</li>
+                        <li><code>package.json</code> - dependencies</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><b>Quiz:</b> What command creates a new Angular project?</p>
+            <button onclick="showAnswer(this, 'ng new my-angular-app')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="module">
+            <h2>Module 2. Components</h2>
+            <p><b>Theory:</b> Components are the building blocks of Angular apps. Each component has a TypeScript file,
+                HTML template, and optional CSS.</p>
+            <pre><code>
+// Generate a component
+ng generate component header
+
+// Example header.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+export class HeaderComponent { }
+            </code></pre>
+            <p><b>Practice:</b> Create a header component and display "Welcome to Angular!"</p>
+            <p><b>Quiz:</b> What decorator defines an Angular component?</p>
+            <button onclick="showAnswer(this, '@Component')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="module">
+            <h2>Module 3. Templates & Data Binding</h2>
+            <p><b>Theory:</b> Templates define the view. Angular supports interpolation, property binding, event
+                binding, and two-way binding.</p>
+            <pre><code>
+&lt;h1&gt;Hello, {{ name }}!&lt;/h1&gt;
+&lt;input [value]="name" (input)="name = $event.target.value"&gt;
+            </code></pre>
+            <p><b>Practice:</b> Bind a variable to input and display it in real-time using interpolation.</p>
+            <p><b>Quiz:</b> Which syntax is used for two-way binding?</p>
+            <button onclick="showAnswer(this, '[(ngModel)]')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="module">
+            <h2>Module 4. Directives</h2>
+            <p><b>Theory:</b> Directives change the DOM structure or behavior. Examples: <code>*ngIf</code>,
+                <code>*ngFor</code>, <code>[ngClass]</code>.
+            </p>
+            <pre><code>
+&lt;div *ngIf="isLoggedIn"&gt;Welcome back!&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li *ngFor="let item of items"&gt;{{ item }}&lt;/li&gt;
+&lt;/ul&gt;
+            </code></pre>
+            <p><b>Practice:</b> Show a list of fruits with *ngFor and conditionally display a message using *ngIf.</p>
+            <p><b>Quiz:</b> What directive is used for looping?</p>
+            <button onclick="showAnswer(this, '*ngFor')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="module">
+            <h2>Module 5. Services & Dependency Injection</h2>
+            <p><b>Theory:</b> Services provide reusable logic. Inject them into components with Angular's DI system.</p>
+            <pre><code>
+// Generate a service
+ng generate service data
+
+// Inject into a component
+constructor(private dataService: DataService) { }
+            </code></pre>
+            <p><b>Practice:</b> Create a service that provides a list of users and display it in a component.</p>
+            <p><b>Quiz:</b> What keyword is used to inject a service?</p>
+            <button onclick="showAnswer(this, 'constructor(private serviceName: ServiceType)')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="module">
+            <h2>Module 6. Routing</h2>
+            <p><b>Theory:</b> Angular Router allows navigation between pages/components.</p>
+            <pre><code>
+// app-routing.module.ts
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent }
+];
+            </code></pre>
+            <p><b>Practice:</b> Add two routes and navigation links.</p>
+            <p><b>Quiz:</b> Which module provides routing?</p>
+            <button onclick="showAnswer(this, 'RouterModule')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 7 -->
+        <div class="module">
+            <h2>Module 7. Forms</h2>
+            <p><b>Theory:</b> Angular supports template-driven and reactive forms.</p>
+            <pre><code>
+// Template-driven
+&lt;input [(ngModel)]="name"&gt;
+
+// Reactive
+this.form = this.fb.group({ name: [''] });
+            </code></pre>
+            <p><b>Practice:</b> Create a simple form that logs user input.</p>
+            <p><b>Quiz:</b> What module is required for template-driven forms?</p>
+            <button onclick="showAnswer(this, 'FormsModule')">Check</button>
+            <div class="answer"></div>
+        </div>
+
+        <!-- Module 8 -->
+        <div class="module">
+            <h2>Module 8. Mini Projects</h2>
+            <ul>
+                <li><b>Todo App:</b> Add/remove tasks with two-way binding.</li>
+                <li><b>User Directory:</b> Display a list of users from a service.</li>
+                <li><b>Simple Router App:</b> Navigate between Home and About pages.</li>
+            </ul>
+        </div>
+
+        <footer class="footer">
+            <ul class="social-links">
+                <li class="social link"><a href="https://www.instagram.com/learn_codee?igsh=czlwNDU4bnk1cnJ3"><svg
+                            fill="#9aa4b2" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#b0b0b0"
+                            height="32px" width="32px">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z">
+                                </path>
+                                <path
+                                    d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z">
+                                </path>
+                            </g>
+                        </svg></a></li>
+                <li class="social link"><a href="https://www.facebook.com/share/g/1B4pqfaPkA/?mibextid=wwXIfr"><svg
+                            fill="#9aa4b2" height="32px" width="32px" version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="-337 273 123.5 256" xml:space="preserve" stroke="#9aa4b2">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M-260.9,327.8c0-10.3,9.2-14,19.5-14c10.3,0,21.3,3.2,21.3,3.2l6.6-39.2c0,0-14-4.8-47.4-4.8c-20.5,0-32.4,7.8-41.1,19.3 c-8.2,10.9-8.5,28.4-8.5,39.7v25.7H-337V396h26.5v133h49.6V396h39.3l2.9-38.3h-42.2V327.8z">
+                                </path>
+                            </g>
+                        </svg></a></li>
+                <li class="social link"><a href="https://discord.gg/32R3bsj4"><svg viewBox="0 -28.5 256 256"
+                            version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid" fill="#000000 height=" 32px" width="32px">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g>
+                                    <path
+                                        d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
+                                        fill="#9aa4b2" fill-rule="nonzero"> </path>
+                                </g>
+                            </g>
+                        </svg></a></li>
+            </ul>
+            <div class="desc">
+                <p>We provide accessible and modern programming courses for beginners. Learn by doing, gain new skills,
+                    and build your IT career with us.</p>
+                <p>© LearnCode — 2025</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function showAnswer(btn, text) {
+            const div = btn.nextElementSibling;
+            div.textContent = "Answer: " + text;
+
+            // GA4 Event
+            gtag('event', 'quiz_answered', {
+                'event_category': 'Quiz',
+                'event_label': btn.closest('.module').querySelector('h2').innerText,
+                'answer': text
+            });
+        }
+        document.querySelectorAll('.nav-link a').forEach(link => {
+            link.addEventListener('click', () => {
+                gtag('event', 'navigate_course', {
+                    'event_category': 'Navigation',
+                    'event_label': link.textContent
+                });
+            });
+        });
+
+        const burger = document.getElementById('burger');
+        const navList = document.querySelector('.nav-list');
+
+        burger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+        const closeBtn = document.getElementById('close-menu');
+
+        closeBtn.addEventListener('click', () => {
+            navList.classList.remove('show');
+        });
+        document.querySelectorAll('.dropdown > a').forEach(drop => {
+            drop.addEventListener('click', function (e) {
+                
+                if (window.innerWidth <= 816) {
+                    e.preventDefault(); 
+                    const content = this.nextElementSibling;
+                    if (content.style.display === 'flex') {
+                        content.style.display = 'none';
+                    } else {
+                        content.style.display = 'flex';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

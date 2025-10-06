@@ -1,26 +1,21 @@
 /* Base header/nav styles */
 body {
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0px;
 }
 
-
-
 .logo {
-
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.logo a {
-    width: 44px;
-    height: 44px;
 }
 
 .logo-img {
@@ -33,20 +28,57 @@ header {
     display: flex;
     gap: 60px;
     list-style: none;
+    /* прибираємо крапки */
+    padding: 0;
+    margin: 0;
     justify-content: flex-end;
 }
 
 .nav-link {
+    position: relative;
+    /* для dropdown */
+    font-size: 22px;
+    font-weight: 700;
     background: -webkit-linear-gradient(#7c5cff, #00d4ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 22px;
-    font-weight: 700;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #0b1220;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.dropdown-content li {
+    background: -webkit-linear-gradient(#7c5cff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px;
+}
+
+
+
+
+/* Desktop hover */
+.dropdown:hover .dropdown-content {
+    display: flex;
 }
 
 /* Burger icon (hidden by default) */
@@ -68,14 +100,37 @@ a {
 /* Media queries */
 
 /* Medium screens */
-@media (max-width: 900px) {
+@media (max-width: 1330px) {
+    header {
+        padding: 10px 0;
+    }
+
     .logo-img {
-        width: 36px;
-        height: 36px;
+        width: 44px;
+        height: 44px;
     }
 
     .nav-link {
-        font-size: 20px;
+        font-size: 17px;
+    }
+
+    .nav-list {
+        gap: 20px;
+    }
+}
+
+.dropdown-media-method{
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .logo-img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .nav-link {
+        font-size: 16px;
     }
 
     .nav-list {
@@ -83,76 +138,59 @@ a {
     }
 }
 
-/* Smaller screens */
-@media (max-width: 730px) {
-    .logo-img {
-        width: 33px;
-        height: 33px;
-    }
-
-    .nav-link {
-        font-size: 18px;
-    }
-
-    .nav-list {
-        gap: 20px;
-    }
-}
-
-/* Burger menu for <630px */
-
-
-@media (max-width: 630px) {
+/* Burger menu for small screens */
+@media (max-width: 816px) {
     .burger {
         display: block;
+    }
+
+    .logo-img {
+        width: 34px;
+        height: 34px;
     }
 
     .close-menu {
         display: block;
     }
-
+    .dropdown-media-method{
+    display: block;
+}
     .nav-list {
-
         position: fixed;
         top: 0;
         right: -100%;
-        top: -60px;
-        /* hidden offscreen */
         height: 110%;
         width: 250px;
         background: #0b1220;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        /* stack items from top */
         align-items: flex-start;
-        /* align links to left side of menu */
         gap: 20px;
         padding: 60px 20px 20px 20px;
-        /* top padding = header height */
         box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
         transition: right 0.3s ease;
         z-index: 1000;
-
     }
 
     .nav-list.show {
         right: 0;
     }
 
-    .nav-link {
-        font-size: 18px;
+
+
+    /* Dropdown in mobile menu */
+    .dropdown-content {
+        position: relative;
+        top: 0;
+        box-shadow: none;
         width: 100%;
-        text-align: left;
-        /* make links align nicely */
+        display: none;
+        flex-direction: column;
     }
 
-    .close-menu {
-        font-size: 28px;
-        cursor: pointer;
-        color: #fff;
-        align-self: flex-end;
-        /* top-right corner */
-        margin-bottom: 20px;
+    .dropdown>a::after {
+
+        float: right;
     }
 }

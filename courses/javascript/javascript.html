@@ -29,15 +29,15 @@
     <meta name="twitter:image" content="https://learncodee.netlify.app/preview-javascript.png">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="course-page.css">
-    <link rel="stylesheet" href="./header.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="../../styles/course-page.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/footer.css">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
-    <link rel="manifest" href="./img/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+    <link rel="manifest" href="../../img/site.webmanifest">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBCKQFRCH2"></script>
@@ -56,21 +56,35 @@
 
         <header>
             <div class="logo" aria-hidden="true">
-                <a href="./index.html">
-                    <img class="logo-img" src="./img/android-chrome-512x512.png" alt="logo">
+                <a href="../../index.html">
+                    <img class="logo-img" src="../../img/android-chrome-512x512.png" alt="logo">
                 </a>
             </div>
             <nav class="nav">
                 <div class="burger" id="burger">&#9776;</div>
                 <ul class="nav-list">
                     <li><span class="close-menu" id="close-menu">&times;</span></li>
-                    <li class="nav-link"><a href="./html-css.html">HTML & CSS</a></li>
-                    <li class="nav-link" data-section="Python"><a href="./python.html">Python</a></li>
-                    <li class="nav-link" data-section="Javascript"><a href="./javascript.html">Javascript</a></li>
-                    <li class="nav-link" data-section="SQL"><a href="./sql.html">SQL</a></li>
-                    <li class="nav-link" data-section="Go"><a href="./go.html">Go</a></li>
-                    <li class="nav-link" data-section="Rust"><a href="./rust.html">Rust</a></li>
-                    <li class="nav-link" data-section="C++"><a href="./cpp.html">C++</a></li>
+                    <li class="nav-link"><a href="../html-css/html-css.html">HTML & CSS</a></li>
+                    <li class="nav-link" data-section="Python"><a href="../python/python.html">Python</a></li>
+
+                    <li class="nav-link dropdown">
+                        <a href="../javascript/javascript.html" class="dropbtn">JavaScript &#9662;</a>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-media-method"><a href="../javascript/javascript.html">JavaScript</a>
+                            </li>
+                            <li><a href="../javascript/react.html">React</a></li>
+                            <li><a href="../javascript/angular.html">Angular</a></li>
+                            <li><a href="../javascript/vue.html">Vue</a></li>
+                            <li><a href="../javascript/node.html">Node.js</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-link" data-section="SQL"><a href="../sql/sql.html">SQL</a></li>
+                    <li class="nav-link" data-section="Go"><a href="../go/go.html">Go</a></li>
+                    <li class="nav-link" data-section="Rust"><a href="../rust/rust.html">Rust</a></li>
+                    <li class="nav-link" data-section="C++"><a href="../c++/cpp.html">C++</a></li>
+                    <li class="nav-link" data-section="Git"><a href="../github/git.html">Git & GitHub</a></li>
                 </ul>
             </nav>
         </header>
@@ -316,6 +330,20 @@ function sayHello() {
 
         closeBtn.addEventListener('click', () => {
             navList.classList.remove('show');
+        });
+        document.querySelectorAll('.dropdown > a').forEach(drop => {
+            drop.addEventListener('click', function (e) {
+
+                if (window.innerWidth <= 816) {
+                    e.preventDefault();
+                    const content = this.nextElementSibling;
+                    if (content.style.display === 'flex') {
+                        content.style.display = 'none';
+                    } else {
+                        content.style.display = 'flex';
+                    }
+                }
+            });
         });
     </script>
 </body>
